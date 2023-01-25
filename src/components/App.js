@@ -1,19 +1,20 @@
 import React from "react";
-import CategoryFilter from "./CategoryFilter";
-import NewTaskForm from "./NewTaskForm";
-import TaskList from "./TaskList";
+import blogData from "../data/blog";
+import Header from "./header";
+import About from "./about";
+import ArticleList from "./ArticleList";
 
-import { CATEGORIES, TASKS } from "../data";
-console.log("Here's the data you're working with");
-console.log({ CATEGORIES, TASKS });
+console.log(blogData);
 
 function App() {
   return (
     <div className="App">
-      <h2>My tasks</h2>
-      <CategoryFilter />
-      <NewTaskForm />
-      <TaskList />
+      {/* You're on your own from here! Follow the deliverables; test things out in
+      the browser as you write your code; and good luck! */}
+
+      <Header name={blogData.name} />
+      <About image={blogData.image} about={blogData.about} />
+      <ArticleList posts={blogData.posts} />
     </div>
   );
 }
